@@ -1,3 +1,4 @@
 Django==4.2.16
 djangorestframework==3.14
 drf-yasg[validation]==1.21.8
+python-dotenv
