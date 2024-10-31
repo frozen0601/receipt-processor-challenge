@@ -37,7 +37,9 @@ THIRD_PARTY_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # addition to core Django
     "rest_framework",
+    "drf_yasg",
 ]
 
 OUR_APPS = [
