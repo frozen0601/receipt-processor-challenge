@@ -11,7 +11,7 @@ from .serializers import ReceiptSerializer
 
 
 class ReceiptViewSet(viewsets.ViewSet):
-    @action(detail=False, methods=["post"], url_path="process")
+    @action(detail=False, methods=["post"], url_path="process", name="process-receipt")
     @swagger_auto_schema(
         request_body=ReceiptSerializer, responses={201: openapi.Response("Created", ReceiptSerializer)}
     )
@@ -25,7 +25,7 @@ class ReceiptViewSet(viewsets.ViewSet):
             return Response({"id": str(receipt.id)}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    @action(detail=True, methods=["get"], url_path="points")
+    @action(detail=True, methods=["get"], url_path="points", name="get-points")
     @swagger_auto_schema(
         responses={
             200: openapi.Response(

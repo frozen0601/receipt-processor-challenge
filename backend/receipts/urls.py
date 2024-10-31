@@ -7,5 +7,4 @@ router.register(r"receipts", ReceiptViewSet, basename="receipt")
 
 urlpatterns = [
     path("", include(router.urls)),
-    path("receipts/<uuid:pk>/points/", ReceiptViewSet.as_view({"get": "get_points"}), name="receipt-points"),
 ]
