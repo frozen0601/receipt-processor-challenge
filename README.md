@@ -6,11 +6,9 @@
 
 
 ## Introduction
-This Django-based web service processes receipts and calculates points based on predefined rules. The API provides a streamlined way to submit receipts and retrieve the points awarded, making it easy to integrate with any system requiring receipt-based point tracking. Key features include **rate limiting**, **automated test coverage**, and a **Swagger interface** for easy API interaction.
+This Django-based web service processes receipts and calculates points based on predefined rules. It provides a streamlined API for submitting receipts and retrieving the corresponding points Key features include **rate limiting** for fair usage,** automated test coverage** to ensure code quality, and a **Swagger interface** for intuitive API interaction.
 
-p.s. I've chosen Django for this project due to my recent two years of professional experience with the framework. While mentioned that Go was not a requirement for this task, I'm happy to implement a Go (Gin) version upon request if preferred.
-
-## Features and Instructions
+Why Django? Django was chosen for this task due to my two years of professional experience with the framework, which allowed me to quickly deliver a reliable and well-tested solution. Although the task didn't require Go, I’m more than happy to implement a Go (Gin) version upon request if it would better showcase my skills or meet your preferences.
 
 ## Features
 - **Rate Limiting**: Ensures fair usage and prevents abuse.
