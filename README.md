@@ -6,13 +6,13 @@
 
 
 ## Introduction
-This Django-based web service processes receipts and calculates points based on predefined rules. It provides a streamlined API for submitting receipts and retrieving the corresponding points Key features include **rate limiting** for fair usage,** automated test coverage** to ensure code quality, and a **Swagger interface** for intuitive API interaction.
+This Django-based web service processes receipts and calculates points based on predefined rules. It provides a streamlined API for submitting receipts and retrieving the corresponding points Key features include **rate limiting** for fair usage,**automated test coverage** to ensure code quality, and a **Swagger interface** for intuitive API interaction.
 
 Why Django? Django was chosen for this task due to my two years of professional experience with the framework, which allowed me to quickly deliver a reliable and well-tested solution. Although the task didn't require Go, I’m more than happy to implement a Go (Gin) version upon request if it would better showcase my skills or meet your preferences.
 
 ## Features
 - **Rate Limiting**: Ensures fair usage and prevents abuse.
-- **Test Coverage**: Comprehensive test coverage is integrated and tracked with Codecov.
+- **Linting & Test Coverage**: Comprehensive test coverage is integrated and tracked with Codecov.
 - **Swagger Documentation**: Interactive API exploration through Swagger UI at `/swagger/`.
 - **Modular & Scalable Design**: Built to scale with additional features and integrations like caching and persistent storage.
 
