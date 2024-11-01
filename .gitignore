@@ -1,4 +1,3 @@
-docker-compose.yml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -109,15 +108,5 @@ venv.bak/
 node_modules
 
 # Our project
-.env
-src/backend/artifacts
-src/backend/staticfiles
-src/backend/uploads
-src/frontend/build/*
-src/frontend/node_modules/*
-src/frontend/package-lock.json
-src/backend/csvgenerate/
-
 /.idea/
 .vscode/
-

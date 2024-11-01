@@ -29,7 +29,8 @@ THIRD_PARTY_APPS = [
     "django.contrib.staticfiles",
     # addition to core Django
     "rest_framework",
-    "drf_yasg",
+    "drf_yasg",  # Swagger generator
+    "django_ratelimit",  # Rate limiting
 ]
 
 OUR_APPS = [
@@ -97,6 +98,9 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+RATELIMIT_DEFAULT = "60/m"
+RATELIMIT_KEY = "ip"  # Rate limit based on IP address
 
 
 # Internationalization

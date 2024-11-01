@@ -1,7 +1,14 @@
 Django==4.2.16
 djangorestframework==3.14
 drf-yasg[validation]==1.21.8
-python-dotenv
+
+# rate limiting
+django-ratelimit==4.1.0
+
+# testing
 pytest
 pytest-django
 pytest-cov
+
+# others
+python-dotenv

@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
+from django_ratelimit.decorators import ratelimit
 import math
 from decimal import Decimal
 from drf_yasg.utils import swagger_auto_schema
@@ -15,6 +16,7 @@ class ReceiptViewSet(viewsets.ViewSet):
     @swagger_auto_schema(
         request_body=ReceiptSerializer, responses={201: openapi.Response("Created", ReceiptSerializer)}
     )
+    @ratelimit(block=True)
     def process_receipt(self, request):
         """
         Submits a receipt for processing.
@@ -36,6 +38,7 @@ class ReceiptViewSet(viewsets.ViewSet):
             )
         }
     )
+    @ratelimit(block=True)
     def get_points(self, request, pk=None):
         """
         Returns the points awarded for the receipt.
