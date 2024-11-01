@@ -11,4 +11,5 @@ pytest-django
 pytest-cov
 
 # others
+django-redis
 python-dotenv
