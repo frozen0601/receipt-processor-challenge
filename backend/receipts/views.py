@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
+from django.core.exceptions import ValidationError
 from django_ratelimit.decorators import ratelimit
 import math
 from decimal import Decimal
@@ -47,6 +48,8 @@ class ReceiptViewSet(viewsets.ViewSet):
             receipt = Receipt.objects.get(pk=pk)
         except Receipt.DoesNotExist:
             return Response({"detail": "Receipt not found."}, status=status.HTTP_404_NOT_FOUND)
+        except ValidationError:
+            return Response({"detail": "Invalid receipt ID."}, status=status.HTTP_400_BAD_REQUEST)
 
         points = self.calculate_points(receipt)
         return Response({"points": points}, status=status.HTTP_200_OK)
