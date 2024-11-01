@@ -13,3 +13,4 @@ pytest-cov
 # others
 django-redis
 python-dotenv
+flake8
