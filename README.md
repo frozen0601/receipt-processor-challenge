@@ -1,8 +1,56 @@
 # Receipt Processor
 
 ![Build Status](https://github.com/frozen0601/receipt-processor-challenge/actions/workflows/ci.yml/badge.svg)
-[![codecov](https://codecov.io/gh/frozen0601/receipt-processor-challenge/branch/main/graph/badge.svg)](https://codecov.io/gh/<your-username>/<your-repo>)
+[![codecov](https://codecov.io/gh/frozen0601/receipt-processor-challenge/branch/main/graph/badge.svg)](https://codecov.io/gh/frozen0601/receipt-processor-challenge)
 
+
+
+## Introduction
+This Django-based web service processes receipts and calculates points based on predefined rules. The API provides a streamlined way to submit receipts and retrieve the points awarded, making it easy to integrate with any system requiring receipt-based point tracking. Key features include **rate limiting**, **automated test coverage**, and a **Swagger interface** for easy API interaction.
+
+p.s. I've chosen Django for this project due to my recent two years of professional experience with the framework. While mentioned that Go was not a requirement for this task, I'm happy to implement a Go (Gin) version upon request if preferred.
+
+## Features and Instructions
+
+## Features
+- **Rate Limiting**: Ensures fair usage and prevents abuse.
+- **Test Coverage**: Comprehensive test coverage is integrated and tracked with Codecov.
+- **Swagger Documentation**: Interactive API exploration through Swagger UI at `/swagger/`.
+- **Modular & Scalable Design**: Built to scale with additional features and integrations like caching and persistent storage.
+
+## Setup and Run
+To set up and run the service locally:
+### 1. Build the Docker image:
+```bash
+docker-compose build
+```
+### 2. Run the Docker container:
+```bash
+docker-compose up
+```
+### 3. Access the application:
+- Navigate to http://localhost:8000/swagger/ to interact with the API via the Swagger UI.
+- Use the API endpoints directly.
+### Available Endpoints:
+#### Process Receipts
+`POST /receipts/process/`
+Submit a receipt for processing.
+#### Get Points
+`GET /receipts/{id}/points/`
+Retrieve the points for a processed receipt.
+
+## CI & Coverage Report:
+ are generated and can be viewed to assess code quality.
+This project integrates with GitHub Actions for CI, running automated tests on every commit. [Coverage reports](https://app.codecov.io/gh/frozen0601/receipt-processor-challenge) are available to ensure code quality.
+
+## Future Improvements
+- **Caching**: Implement Redis caching for frequently accessed data to improve performance.
+- **Database Integration**: Transition from in-memory storage to a relational database (e.g., PostgreSQL) for persistent data handling.
+- **Security Enhancements**: Add authentication and authorization mechanisms to secure API access.
+
+<br/><br/>
+### _the following are the original README_
+---
 Build a webservice that fulfils the documented API. The API is described below. A formal definition is provided 
 in the [api.yml](./api.yml) file, but the information in this README is sufficient for completion of this challenge. We will use the 
 described API to test your solution.
